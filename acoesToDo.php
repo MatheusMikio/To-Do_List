@@ -55,7 +55,7 @@ if (isset($_GET['editar_tarefa'])){
         $_SESSION['type'] = 'success';
     }
     else{
-        $_SESSION['message'] = "Não foi possivel atuazalizar a tarefa {$idTarefa}";
+        $_SESSION['message'] = "Não foi possivel atualizar a tarefa {$idTarefa}";
         $_SESSION['type'] = 'error';
     }
 
