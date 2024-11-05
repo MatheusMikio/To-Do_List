@@ -51,11 +51,11 @@ if (isset($_GET['editar_tarefa'])){
     mysqli_query($conexao,$sql);
 
     if (mysqli_affected_rows($conexao) > 0){
-        $_SESSION['message'] = "Tarefa {$idTarefa} Atualizada!";
+        $_SESSION['message'] = "Tarefa atualizada!";
         $_SESSION['type'] = 'success';
     }
     else{
-        $_SESSION['message'] = "Não foi possivel atualizar a tarefa {$idTarefa}";
+        $_SESSION['message'] = "Não foi possivel atualizar a tarefa!";
         $_SESSION['type'] = 'error';
     }
 
@@ -70,11 +70,11 @@ if (isset($_GET['deletar_tarefa'])){
     mysqli_query($conexao,$sql);
 
     if (mysqli_affected_rows($conexao) > 0){
-        $_SESSION['message'] = "Tarefa {$idTarefa} excluído com sucesso!";
+        $_SESSION['message'] = "Tarefa excluída com sucesso!";
         $_SESSION['type'] = "success";
     }
     else{
-        $_SESSION['message'] = "Não foi possível excluir o usuário";
+        $_SESSION['message'] = "Não foi possível excluir a tarefa";
         $_SESSION['type'] = 'error';
     }
 
@@ -91,7 +91,7 @@ if (isset($_GET['mudarSituacao'])){
     mysqli_query($conexao,$sql);
 
     if (mysqli_affected_rows($conexao) > 0){
-        $_SESSION['message'] = "Status da tarefa {$idTarefa} foi atualizado!";
+        $_SESSION['message'] = "Status da tarefa foi atualizado!";
         $_SESSION['type'] = "success";
     }
     else{
